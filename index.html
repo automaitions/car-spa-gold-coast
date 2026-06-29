@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CAR SPA Gold Coast — Premium Hand Car Wash & Detailing | Southport</title>
+<meta name="description" content="Gold Coast's premium hand car wash. Showroom shine, every time. Hand wash, full detail and the CAR SPA Club membership — Southport, QLD." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#08090b;
+    --bg2:#0e1013;
+    --surface:#15181d;
+    --line:rgba(255,255,255,.08);
+    --white:#f6f8fa;
+    --muted:#9aa3ad;
+    --blue:#34a9f2;
+    --blue-deep:#1d7fc4;
+    --chrome:linear-gradient(180deg,#ffffff 0%,#cfd6dd 45%,#8a929b 55%,#eef2f5 100%);
+    --gold:#d8b066;
+    --radius:18px;
+    --max:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--bg);color:var(--white);
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Saira Condensed',sans-serif;font-style:italic;text-transform:uppercase;line-height:.96;letter-spacing:.5px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .blue{color:var(--blue)}
+  .chrome{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.95rem;padding:.85rem 1.5rem;border-radius:100px;transition:.25s;cursor:pointer;border:1px solid transparent}
+  .btn-primary{background:linear-gradient(180deg,var(--blue),var(--blue-deep));color:#001624;box-shadow:0 8px 30px rgba(52,169,242,.3)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(52,169,242,.45)}
+  .btn-ghost{border-color:var(--line);background:rgba(255,255,255,.03);color:var(--white)}
+  .btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+
+  /* NAV */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(8,9,11,.82);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{height:38px;border-radius:7px}
+  .navlinks{display:flex;gap:34px;font-size:.9rem;font-weight:500;color:var(--muted)}
+  .navlinks a:hover{color:var(--white)}
+  @media(max-width:860px){.navlinks{display:none}}
+
+  /* HERO */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 70px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.32;filter:saturate(1.1)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:
+    radial-gradient(120% 90% at 75% 30%,transparent,rgba(8,9,11,.7) 70%),
+    linear-gradient(90deg,var(--bg) 22%,rgba(8,9,11,.5) 60%,rgba(8,9,11,.85))}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;width:100%}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:38px}}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);border:1px solid var(--line);padding:.45rem .9rem;border-radius:100px;background:rgba(52,169,242,.06)}
+  .hero h1{font-size:clamp(3.1rem,8vw,6rem);margin:22px 0 0;font-weight:800}
+  .hero h1 .l2{display:block}
+  .hero p.sub{font-size:1.15rem;color:var(--muted);max-width:30rem;margin:22px 0 30px;font-style:normal}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .trust{display:flex;align-items:center;gap:18px;margin-top:34px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+  .stars{color:#ffc24b;letter-spacing:2px}
+  .trust b{color:var(--white)}
+  .hero-card{position:relative}
+  .hero-card .shot{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:0 40px 80px rgba(0,0,0,.6);aspect-ratio:4/5}
+  .hero-card .shot img{width:100%;height:100%;object-fit:cover}
+  .hero-card .float{position:absolute;left:-22px;bottom:26px;background:rgba(20,24,29,.9);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:14px 18px;display:flex;gap:12px;align-items:center}
+  .hero-card .float .n{font-family:'Saira Condensed';font-style:italic;font-size:1.7rem;font-weight:800;color:var(--blue);line-height:1}
+  .hero-card .float small{color:var(--muted);font-size:.78rem;display:block}
+  @media(max-width:900px){.hero-card .float{left:auto;right:14px}}
+
+  /* MARQUEE */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);padding:18px 0;overflow:hidden;white-space:nowrap}
+  .marquee .track{display:inline-block;animation:scroll 26s linear infinite}
+  .marquee span{font-family:'Saira Condensed';font-style:italic;text-transform:uppercase;font-weight:700;font-size:1.25rem;color:#3a414a;margin:0 28px;letter-spacing:1px}
+  .marquee span b{color:var(--muted)}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* SECTION */
+  section{padding:100px 0}
+  .sec-head{max-width:640px;margin-bottom:54px}
+  .sec-head .eyebrow{margin-bottom:18px}
+  .sec-head h2{font-size:clamp(2.3rem,5vw,3.6rem);font-weight:800}
+  .sec-head p{color:var(--muted);margin-top:16px;font-size:1.08rem}
+
+  /* SERVICES */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:860px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.3s;position:relative;overflow:hidden}
+  .card:hover{border-color:rgba(52,169,242,.4);transform:translateY(-4px)}
+  .card .ic{width:46px;height:46px;border-radius:12px;background:rgba(52,169,242,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:20px}
+  .card h3{font-size:1.5rem;font-weight:700}
+  .card .price{font-family:'Saira Condensed';font-style:italic;font-weight:800;font-size:2rem;margin:6px 0 2px}
+  .card .price small{font-size:.85rem;color:var(--muted);font-style:normal;font-family:'Inter';font-weight:500}
+  .card ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:9px}
+  .card li{font-size:.93rem;color:var(--muted);display:flex;gap:9px;align-items:flex-start}
+  .card li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);margin-top:8px;flex-shrink:0}
+  .card.featured{border-color:rgba(52,169,242,.5);background:linear-gradient(180deg,rgba(52,169,242,.07),var(--surface))}
+  .tag{position:absolute;top:18px;right:18px;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);border:1px solid rgba(52,169,242,.4);padding:.25rem .6rem;border-radius:100px}
+
+  /* CLUB */
+  .club{background:linear-gradient(180deg,var(--bg),var(--bg2))}
+  .club-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
+  @media(max-width:900px){.club-grid{grid-template-columns:1fr;gap:40px}}
+  .membercard{aspect-ratio:1.6/1;border-radius:20px;padding:30px;background:
+     radial-gradient(120% 120% at 100% 0,rgba(52,169,242,.22),transparent 55%),
+     linear-gradient(145deg,#1a1e24,#0b0d10);
+     border:1px solid var(--line);position:relative;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.55)}
+  .membercard::before{content:"";position:absolute;top:-40%;right:-10%;width:60%;height:160%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.06),transparent);transform:rotate(18deg)}
+  .membercard .mc-top{display:flex;justify-content:space-between;align-items:flex-start}
+  .membercard img{height:30px;border-radius:5px}
+  .membercard .mc-label{font-family:'Saira Condensed';font-style:italic;font-weight:700;color:var(--gold);letter-spacing:1px;font-size:1rem}
+  .membercard .perks{margin-top:26px;display:flex;flex-direction:column;gap:11px}
+  .membercard .perks div{display:flex;gap:10px;align-items:center;font-size:.92rem;color:#dfe4e9}
+  .membercard .perks .pi{color:var(--gold)}
+  .membercard .mc-foot{position:absolute;bottom:24px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid var(--line);padding-top:14px}
+  .membercard .mc-foot small{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em}
+  .membercard .mc-foot b{font-family:'Saira Condensed';font-style:italic;font-size:1.2rem;color:var(--white)}
+  .club-copy h2{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800}
+  .club-copy p{color:var(--muted);margin:18px 0 24px;font-size:1.08rem}
+  .club-copy ul{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:30px}
+  .club-copy li{display:flex;gap:13px;font-size:1rem}
+  .club-copy li .pi{color:var(--blue);font-weight:700;font-size:1.2rem}
+  .club-copy li b{color:var(--white)}
+
+  /* GALLERY */
+  .gallery{columns:4;column-gap:14px}
+  @media(max-width:1000px){.gallery{columns:3}}
+  @media(max-width:680px){.gallery{columns:2}}
+  .gallery a{display:block;margin-bottom:14px;border-radius:14px;overflow:hidden;border:1px solid var(--line);break-inside:avoid;position:relative}
+  .gallery img{width:100%;display:block;transition:.5s}
+  .gallery a:hover img{transform:scale(1.06)}
+  .gallery a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.35));opacity:0;transition:.3s}
+  .gallery a:hover::after{opacity:1}
+
+  /* PROCESS / WHY */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:860px){.why-grid{grid-template-columns:1fr}}
+  .why{padding:30px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+  .why .num{font-family:'Saira Condensed';font-style:italic;font-weight:800;font-size:2.6rem;color:rgba(52,169,242,.35);line-height:1}
+  .why h3{font-size:1.35rem;margin:10px 0 8px;font-weight:700}
+  .why p{color:var(--muted);font-size:.95rem}
+
+  /* CTA BAND */
+  .band{position:relative;text-align:center;padding:110px 0;overflow:hidden}
+  .band-bg{position:absolute;inset:0;z-index:0}
+  .band-bg img{width:100%;height:100%;object-fit:cover;opacity:.25}
+  .band-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 120% at 50% 50%,rgba(8,9,11,.5),var(--bg))}
+  .band-inner{position:relative;z-index:2}
+  .band h2{font-size:clamp(2.5rem,6vw,4.4rem);font-weight:800}
+  .band p{color:var(--muted);font-size:1.15rem;margin:18px auto 32px;max-width:34rem}
+
+  /* INFO */
+  .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:860px){.info-grid{grid-template-columns:1fr}}
+  .info{padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+  .info h4{font-family:'Saira Condensed';font-style:italic;text-transform:uppercase;color:var(--blue);font-size:1.1rem;margin-bottom:12px;letter-spacing:.5px}
+  .info p{color:var(--muted);font-size:.96rem}
+  .info b{color:var(--white)}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--line);padding:50px 0 36px;background:var(--bg2)}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .foot img{height:34px;border-radius:6px}
+  .foot .muted{color:var(--muted);font-size:.85rem}
+  .foot-links{display:flex;gap:24px;font-size:.9rem;color:var(--muted)}
+  .foot-links a:hover{color:var(--blue)}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#"><img src="assets/logo.jpg" alt="CAR SPA Gold Coast" /></a>
+    <nav class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#club">The Club</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a href="#book" class="btn btn-primary">Book a Wash</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="assets/photos/rolls-wraith.jpg" alt="" /></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">★ 5.0 on Google · Southport, Gold Coast</span>
+      <h1>Showroom shine.<span class="l2 blue">Every time.</span></h1>
+      <p class="sub">The Gold Coast's premium <b>hand</b> car wash &amp; detailing. No machines, no scratches — just a meticulous hand wash from a team that treats every car like it's in the showroom.</p>
+      <div class="hero-cta">
+        <a href="#book" class="btn btn-primary">Book your wash →</a>
+        <a href="#club" class="btn btn-ghost">Join the CAR SPA Club</a>
+      </div>
+      <div class="trust">
+        <span><span class="stars">★★★★★</span> <b>5.0</b> Google rating</span>
+        <span>·</span>
+        <span><b>11.4k</b> on Instagram</span>
+        <span>·</span>
+        <span>Trusted with Ferrari, Lamborghini &amp; Rolls-Royce</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="shot"><img src="assets/photos/lambo-huracan-sto.jpg" alt="Lamborghini Huracán STO detailed at CAR SPA" /></div>
+      <div class="float">
+        <div class="n">8AM</div>
+        <div><small>Open daily</small><strong style="font-size:.92rem">Walk-ins welcome</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="track">
+    <span><b>FERRARI</b> · PUROSANGUE · F8 · 296 GTS · <b>LAMBORGHINI</b> · URUS · HURACÁN STO · <b>ROLLS-ROYCE</b> · WRAITH · <b>MCLAREN</b> · 750S · <b>AUDI</b> · R8 V10 · <b>MERCEDES</b> · G-WAGON · </span>
+    <span><b>FERRARI</b> · PUROSANGUE · F8 · 296 GTS · <b>LAMBORGHINI</b> · URUS · HURACÁN STO · <b>ROLLS-ROYCE</b> · WRAITH · <b>MCLAREN</b> · 750S · <b>AUDI</b> · R8 V10 · <b>MERCEDES</b> · G-WAGON · </span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The Menu</span>
+      <h2>Pick your <span class="blue">detail</span></h2>
+      <p>Every wash is done by hand, inside and out. From a quick refresh to a full showroom detail — your car leaves looking the day it rolled off the lot.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ic">🧼</div>
+        <h3>Wash n Vac</h3>
+        <div class="price">The essential<small></small></div>
+        <ul>
+          <li>Hand wash &amp; dry, exterior</li>
+          <li>Full interior vacuum</li>
+          <li>Windows, dash &amp; console wipe-down</li>
+          <li>Tyre shine finish</li>
+        </ul>
+      </div>
+      <div class="card featured reveal">
+        <span class="tag">Most popular</span>
+        <div class="ic">💎</div>
+        <h3>The Big Boy</h3>
+        <div class="price">Full detail<small></small></div>
+        <ul>
+          <li>Everything in Wash n Vac</li>
+          <li>Deep interior detail &amp; protectant</li>
+          <li>Clay &amp; paint decontamination</li>
+          <li>Tyre, trim &amp; glass treatment</li>
+          <li>Showroom finish, guaranteed</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="ic">✨</div>
+        <h3>Custom &amp; Exotic</h3>
+        <div class="price">By quote<small></small></div>
+        <ul>
+          <li>Supercars &amp; prestige vehicles</li>
+          <li>Paint correction &amp; ceramic options</li>
+          <li>Tailored to your vehicle</li>
+          <li>Booked one-on-one with the team</li>
+        </ul>
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:.88rem;margin-top:22px">Pricing varies by vehicle size — message us or book in and we'll confirm on arrival.</p>
+  </div>
+</section>
+
+<!-- CLUB -->
+<section id="club" class="club">
+  <div class="wrap club-grid">
+    <div class="membercard reveal">
+      <div class="mc-top">
+        <img src="assets/logo.jpg" alt="CAR SPA" />
+        <span class="mc-label">CLUB MEMBER</span>
+      </div>
+      <div class="perks">
+        <div><span class="pi">📅</span> Priority booking</div>
+        <div><span class="pi">％</span> Exclusive member pricing</div>
+        <div><span class="pi">✦</span> Showroom shine, every time</div>
+      </div>
+      <div class="mc-foot">
+        <div><small>Includes</small><br><b>6 Wash n Vac</b></div>
+        <div style="text-align:right"><small>Valid</small><br><b>3 Months</b></div>
+      </div>
+    </div>
+    <div class="club-copy reveal">
+      <span class="eyebrow">Members save more</span>
+      <h2>Join the <span class="blue">CAR SPA Club</span></h2>
+      <p>For the locals who keep their car immaculate. One card, six washes, three months — at a price walk-ins don't get.</p>
+      <ul>
+        <li><span class="pi">✓</span> <b>6 Wash n Vac services</b> on one membership card</li>
+        <li><span class="pi">✓</span> <b>Priority booking</b> — skip the queue, name your time</li>
+        <li><span class="pi">✓</span> <b>Exclusive member pricing</b> across the menu</li>
+        <li><span class="pi">✓</span> Valid 3 months from purchase</li>
+      </ul>
+      <a href="#book" class="btn btn-primary">Become a member →</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The Work</span>
+      <h2>Freshly <span class="blue">detailed</span></h2>
+      <p>A look at what rolls through the bay. The Gold Coast's finest trust us with their pride and joy — see why.</p>
+    </div>
+    <div class="gallery reveal">
+      <a href="#book"><img src="assets/photos/ferrari-purosangue.jpg" alt="Ferrari Purosangue" loading="lazy"/></a>
+      <a href="#book"><img src="assets/photos/gwagon.jpg" alt="Mercedes G-Wagon" loading="lazy"/></a>
+      <a href="#book"><img src="assets/photos/mclaren-750s.jpg" alt="McLaren 750S" loading="lazy"/></a>
+      <a href="#book"><img src="assets/photos/ferrari-f8.jpg" alt="Ferrari F8" loading="lazy"/></a>
+      <a href="#book"><img src="assets/photos/lambo-urus.jpg" alt="Lamborghini Urus" loading="lazy"/></a>
+      <a href="#book"><img src="assets/photos/audi-r8.jpg" alt="Audi R8 V10" loading="lazy"/></a>
+      <a href="#book"><img src="assets/photos/rolls-wraith.jpg" alt="Rolls-Royce Wraith Black Badge" loading="lazy"/></a>
+      <a href="#book"><img src="assets/photos/ferrari-296gts.jpg" alt="Ferrari 296 GTS" loading="lazy"/></a>
+      <a href="#book"><img src="assets/photos/lambo-huracan-sto.jpg" alt="Lamborghini Huracán STO" loading="lazy"/></a>
+      <a href="#book"><img src="assets/photos/club-welcome.jpg" alt="CAR SPA Club" loading="lazy"/></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why CAR SPA</span>
+      <h2>Hands on. <span class="blue">Always.</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><div class="num">01</div><h3>By hand, never machines</h3><p>No spinning brushes, no swirl marks. Every panel is washed and dried by hand — the only way to protect prestige paint.</p></div>
+      <div class="why reveal"><div class="num">02</div><h3>Inside &amp; out, every time</h3><p>Full exterior wash plus a complete interior vacuum and wipe-down as standard. You drive away spotless top to bottom.</p></div>
+      <div class="why reveal"><div class="num">03</div><h3>Trusted with the best</h3><p>From daily drivers to seven-figure supercars, the Gold Coast brings us what they love most. Five stars, earned one car at a time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section id="book" class="band">
+  <div class="band-bg"><img src="assets/photos/ferrari-296gts.jpg" alt="" /></div>
+  <div class="wrap band-inner">
+    <span class="eyebrow reveal">Southport · Open daily 8AM</span>
+    <h2 class="reveal" style="margin-top:18px">Book your wash</h2>
+    <p class="reveal">Drop us a message or come by — walk-ins welcome. Let's get your car back to showroom.</p>
+    <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="https://instagram.com/carspa.gc" class="btn btn-primary">Message us on Instagram</a>
+      <a href="#visit" class="btn btn-ghost">Find us</a>
+    </div>
+  </div>
+</section>
+
+<!-- INFO / VISIT -->
+<section id="visit" style="padding-top:90px">
+  <div class="wrap">
+    <div class="info-grid">
+      <div class="info reveal"><h4>Where</h4><p><b>Southport</b><br>Gold Coast, QLD</p></div>
+      <div class="info reveal"><h4>Hours</h4><p><b>Open daily</b><br>8:00 AM – 2:00 PM</p></div>
+      <div class="info reveal"><h4>Get in touch</h4><p><b><a href="https://instagram.com/carspa.gc" class="blue">@carspa.gc</a></b><br>DM to book or ask</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <img src="assets/logo.jpg" alt="CAR SPA Gold Coast" />
+      <p class="muted" style="margin-top:12px">Premium hand car wash &amp; detailing — Southport, Gold Coast.</p>
+    </div>
+    <div class="foot-links">
+      <a href="#services">Services</a>
+      <a href="#club">The Club</a>
+      <a href="#gallery">Gallery</a>
+      <a href="https://instagram.com/carspa.gc">Instagram</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:28px"><p class="muted" style="font-size:.78rem">© 2026 CAR SPA Gold Coast. All rights reserved.</p></div>
+</footer>
+
+<script>
+  const hdr=document.getElementById('hdr');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
+  const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
